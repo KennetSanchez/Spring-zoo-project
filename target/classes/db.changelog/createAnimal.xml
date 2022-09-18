@@ -3,14 +3,14 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
 
-    <changeSet id="33d4e9bc-7210-47c3-9617-c56ab7c0750d" author="juan.prada" failOnError="true">
+    <changeSet id="33d4e9bc-7210-47c3-9617-c56ab7c0750d" author="Kennet_Sánchez" failOnError="true">
 
-        <createTable tableName="animal">
+        <createTable tableName="animals">
             <column name="id" type="UUID">
-                <constraints nullable="false" primaryKey="true" />
+                <constraints nullable="false" unique="true"/>
             </column>
             <column name="name" type="varchar(120)">
-                <constraints unique="true" nullable="false"/>
+                <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="sex" type="char(1)">
                 <constraints unique="true" nullable="false"/>

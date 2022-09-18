@@ -9,6 +9,7 @@ import java.util.UUID;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class AnimalDTO {
     private UUID id;
     private UUID fatherId;
