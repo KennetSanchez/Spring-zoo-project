@@ -1,12 +1,17 @@
+co\edu\icesi\zoowebpage\config\JacksonConfig.class
 co\edu\icesi\zoowebpage\controller\AnimalController.class
 co\edu\icesi\zoowebpage\dto\AnimalDTO.class
 co\edu\icesi\zoowebpage\repository\AnimalRepository.class
 co\edu\icesi\zoowebpage\config\LiquibaseConfig.class
 co\edu\icesi\zoowebpage\service\impl\AnimalServiceImpl.class
 co\edu\icesi\zoowebpage\mapper\AnimalMapperImpl.class
+co\edu\icesi\zoowebpage\config\jackson\LocalDateTimeSerializer.class
+co\edu\icesi\zoowebpage\config\jackson\LocalDateTimeDeserializer.class
 co\edu\icesi\zoowebpage\api\AnimalAPI.class
 co\edu\icesi\zoowebpage\ZooWebPageApplication.class
+co\edu\icesi\zoowebpage\constant\AnimalErrorCode.class
 co\edu\icesi\zoowebpage\mapper\AnimalMapper.class
+co\edu\icesi\zoowebpage\constant\AnimalConstant.class
 co\edu\icesi\zoowebpage\model\Animal$AnimalBuilder.class
 co\edu\icesi\zoowebpage\model\Animal.class
 co\edu\icesi\zoowebpage\service\AnimalService.class

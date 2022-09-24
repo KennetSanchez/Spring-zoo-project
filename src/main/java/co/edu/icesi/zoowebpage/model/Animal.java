@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -38,7 +37,6 @@ public class Animal {
 
     private float height;
 
-    @DateTimeFormat(pattern="yyyy-MM-ddTHH:mm:ss")
     private LocalDateTime arrivalDate;
 
     @PrePersist
