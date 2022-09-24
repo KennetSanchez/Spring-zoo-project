@@ -7,7 +7,9 @@ import co.edu.icesi.zoowebpage.service.AnimalService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @RestController
@@ -16,13 +18,20 @@ public class AnimalController implements AnimalAPI {
     public final AnimalMapper animalMapper;
     public final AnimalService animalService;
 
+
+
     @Override
-    public AnimalDTO getAnimal(String name){
-        return animalMapper.fromAnimal(animalService.getAnimal(name));
+    public AnimalDTO getAnimalUsingName(String name){
+        return animalMapper.fromAnimal(animalService.getAnimalUsingName(name));
     }
 
     @Override
-    public AnimalDTO createAnimal(AnimalDTO animalDTO){
+    public AnimalDTO getAnimalUsingId(UUID id){
+        return animalMapper.fromAnimal(animalService.getAnimalUsingId(id));
+    }
+
+    @Override
+    public AnimalDTO createAnimal(@Valid AnimalDTO animalDTO){
         return animalMapper.fromAnimal(animalService.createAnimal(animalMapper.fromDTO(animalDTO)));
     }
 

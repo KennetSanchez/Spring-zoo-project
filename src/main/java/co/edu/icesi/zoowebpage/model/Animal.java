@@ -5,11 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
@@ -23,14 +25,21 @@ public class Animal {
     @Id
     @Type(type="org.hibernate.type.UUIDCharType")
     private UUID id;
+    private UUID fatherId;
+    private UUID motherId;
 
-    private String email;
 
-    private String phoneNumber;
+    private String name;
+    private char sex;
 
-    private String firstName;
+    private float weight;
 
-    private String lastName;
+    private float age;
+
+    private float height;
+
+    @DateTimeFormat(pattern="yyyy-MM-ddTHH:mm:ss")
+    private LocalDateTime arrivalDate;
 
     @PrePersist
     public void generateId(){

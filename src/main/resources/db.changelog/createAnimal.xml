@@ -13,18 +13,18 @@
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="sex" type="char(1)">
-                <constraints unique="true" nullable="false"/>
-            </column>
-            <column name="weight" type="float">
                 <constraints nullable="false"/>
             </column>
-            <column name="age" type="integer">
+            <column name="weight" type="numeric(10,4)">
                 <constraints nullable="false"/>
             </column>
-            <column name="height" type="float">
+            <column name="age" type="numeric(4,2)">
                 <constraints nullable="false"/>
             </column>
-            <column name="arriveDate" type="date">
+            <column name="height" type="numeric(10,4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="arrivalDate" type="date">
                 <constraints nullable="false" checkConstraint= "sysdate >= arriveData"/>
             </column>
             <column name="fatherId" type="UUID">

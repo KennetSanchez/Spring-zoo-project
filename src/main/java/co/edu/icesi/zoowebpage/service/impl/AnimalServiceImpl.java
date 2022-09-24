@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -18,10 +19,14 @@ public class AnimalServiceImpl implements AnimalService {
     public final AnimalRepository animalRepository;
 
     @Override
-    public Animal getAnimal(String name){
-        return animalRepository.findById(name).orElse(null);
+    public Animal getAnimalUsingName(String name){
+        return animalRepository.findByName(name).orElse(null);
     }
 
+    @Override
+    public Animal getAnimalUsingId(UUID id){
+        return animalRepository.findById(id).orElse(null);
+    }
     @Override
     public Animal createAnimal(Animal animalDTO){
         return animalRepository.save(animalDTO);
