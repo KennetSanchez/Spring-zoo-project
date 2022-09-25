@@ -4,8 +4,8 @@ import co.edu.icesi.zoowebpage.constant.AnimalConstant;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.UniqueElements;
 
+import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -13,10 +13,12 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AnimalDTO {
-
+public class AnimalWithParentsDTO {
     private UUID id;
 
+    private UUID fatherId;
+
+    private UUID motherId;
 
     @NotBlank
     @Pattern(regexp = "[a-zA-Z ]+", message = "The name only allows letters and white spaces")
