@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: co.edu.icesi.zoowebpage.ZooWebPageApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.081 s - in co.edu.icesi.zoowebpage.ZooWebPageApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.035 s - in co.edu.icesi.zoowebpage.ZooWebPageApplicationTests
