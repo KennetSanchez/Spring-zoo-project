@@ -1,12 +1,12 @@
 
-# Zoo spring service
+# <center>Zoo spring service
 
 This project allows the zoo to register and search different ring tailed lemurs from their database.
 
 The project includes validations to assure the integrity of the data. 
 
 
-## Data information
+## <center>Data information
 
 * The format of the date is "yyyy- MM- dd hh-mm-ss", the program crash if the format isn't fulfilled
 
@@ -17,7 +17,7 @@ The project includes validations to assure the integrity of the data.
 * The age should be in years
 
 
-## How to use it?
+## <center>How to use it?
 
 * The service root is on localhost:8081/animals
 
