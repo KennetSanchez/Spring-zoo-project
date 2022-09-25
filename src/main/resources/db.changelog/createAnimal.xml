@@ -24,14 +24,14 @@
             <column name="height" type="numeric(10,4)">
                 <constraints nullable="false"/>
             </column>
-            <column name="arrivalDate" type="date">
+            <column name="arrival_date" type="date">
                 <constraints nullable="false" checkConstraint= "sysdate >= arriveData"/>
             </column>
-            <column name="fatherId" type="UUID">
-                <constraints nullable="false"/>
+            <column name="father_id" type="UUID">
+                <constraints nullable="true"/>
             </column>
-            <column name="motherId" type="UUID">
-                <constraints nullable="false"/>
+            <column name="mother_id" type="UUID">
+                <constraints nullable="true"/>
             </column>
         </createTable>
     </changeSet>

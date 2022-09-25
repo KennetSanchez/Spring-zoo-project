@@ -15,10 +15,9 @@ public enum AnimalErrorCode {
     CODE_06("It's height it's too low, you should feed them better:c"),
     CODE07("It's height it's too high"),
     CODE_08("This lemur has just broke the spacial time continuity, or it's just a typo error"),
-    CODE_09("The mother must be a female"),
-    CODE_10("The father must be a male"),
-    CODE_11("The animal can't be null"),
-    CODE_12("The name must be unique, this one it's used");
+    CODE_09("The sex of the parent is not the expected one"),
+    CODE_10("The animal can't be null"),
+    CODE_11("The name must be unique, this one it's used");
 
 
 

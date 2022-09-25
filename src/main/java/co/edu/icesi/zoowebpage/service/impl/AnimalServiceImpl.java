@@ -16,8 +16,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import static co.edu.icesi.zoowebpage.constant.AnimalErrorCode.CODE_01;
-import static co.edu.icesi.zoowebpage.constant.AnimalErrorCode.CODE_11;
+import static co.edu.icesi.zoowebpage.constant.AnimalErrorCode.CODE_10;
 
 @AllArgsConstructor
 @Service
@@ -31,7 +30,7 @@ public class AnimalServiceImpl implements AnimalService {
         List<Animal> animals = new ArrayList<>();
         Animal animal = getAnimalByName(name);
         if(animal == null){
-            throw new AnimalException(HttpStatus.NOT_FOUND, new AnimalError(CODE_11, CODE_11.getMessage()));
+            throw new AnimalException(HttpStatus.NOT_FOUND, new AnimalError(CODE_10, CODE_10.getMessage()));
         }
 
         animals.add(animal);
@@ -53,14 +52,18 @@ public class AnimalServiceImpl implements AnimalService {
     }
     @Override
     public Animal createAnimal(Animal animalDTO){
+        nameUnique(animalDTO);
+
+        return animalRepository.save(animalDTO);
+    }
+
+    private void nameUnique(Animal animalDTO) {
         List<Animal> animals = getAnimals();
         for (Animal x : animals){
             if (x.getName().equals(animalDTO.getName())){
-                throw new AnimalException(HttpStatus.CONFLICT, new AnimalError(AnimalErrorCode.CODE_12,AnimalErrorCode.CODE_12.getMessage()));
+                throw new AnimalException(HttpStatus.CONFLICT, new AnimalError(AnimalErrorCode.CODE_11,AnimalErrorCode.CODE_11.getMessage()));
             }
         }
-
-        return animalRepository.save(animalDTO);
     }
 
     @Override
