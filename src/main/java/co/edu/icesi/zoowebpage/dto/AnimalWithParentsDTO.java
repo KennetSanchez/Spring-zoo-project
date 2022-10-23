@@ -1,9 +1,11 @@
 package co.edu.icesi.zoowebpage.dto;
 
 import co.edu.icesi.zoowebpage.constant.AnimalConstant;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -42,5 +44,7 @@ public class AnimalWithParentsDTO {
 
     @NotNull
     @PastOrPresent(message = "This lemur has just broke the spacial time continuity, or it's just a typo error")
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime arrivalDate;
 }

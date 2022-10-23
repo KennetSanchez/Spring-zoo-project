@@ -19,7 +19,7 @@ public class LocalDateTimeDeserializer extends StdDeserializer<LocalDateTime> {
     public LocalDateTime deserialize(JsonParser p, DeserializationContext ctx) throws IOException, JacksonException {
         String text = p.getText();
         try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
             return LocalDateTime.parse(text, formatter);
         }catch (DateTimeException dateTimeException){
             throw new InvalidFormatException(p ," ", p.getText(), LocalDateTime.class);

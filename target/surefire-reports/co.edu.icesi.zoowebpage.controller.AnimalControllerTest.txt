@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: co.edu.icesi.zoowebpage.controller.AnimalControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.089 s - in co.edu.icesi.zoowebpage.controller.AnimalControllerTest

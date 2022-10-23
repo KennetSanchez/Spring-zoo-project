@@ -1,8 +1,9 @@
 {
-  "name" : "Julien",
+  "id": "6a7c41b7-35c4-4f29-ac8f-7f87570b8001",
+  "name" : "King Julien",
   "sex" : "M",
-  "weight" : 1975,
+  "weight" : 1900,
   "height" : 98,
   "age" : 12,
-  "arrivalDate" : "2022-10-21 13:31:13"
+  "arrivalDate" : "2022-10-21T13:31:13"
 }

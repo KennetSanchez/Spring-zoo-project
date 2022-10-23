@@ -23,7 +23,7 @@ public class AnimalConstantTests {
 
     //Invalid data
     public final LocalDateTime ARRIVAL_INVALID_DATE = LocalDateTime.parse("2023-10-21 13:31:13", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-    public final String RTL_INVALID_NAME = "King/Julien01";
+    public final String RTL_INVALID_NAME = "@n_.;<as7524";
     public final float RTL_INVALID_WEIGHT = 3975f;
     public final float RTL_INVALID_AGE = 901.3f;
     public final float RTL_INVALID_HEIGHT = 487f;

@@ -1,0 +1,7 @@
+co\edu\icesi\zoowebpage\service\AnimalServiceTest.class
+co\edu\icesi\zoowebpage\ZooWebPageApplicationTests.class
+co\edu\icesi\zoowebpage\integration\config\InitialDataConfig.class
+co\edu\icesi\zoowebpage\controller\AnimalControllerTest.class
+co\edu\icesi\zoowebpage\integration\CreateAnimalIntegrationTest.class
+co\edu\icesi\zoowebpage\integration\GetAnimalIntegrationTest.class
+co\edu\icesi\zoowebpage\constant\AnimalConstantTests.class

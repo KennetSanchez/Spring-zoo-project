@@ -18,13 +18,13 @@
             <column name="weight" type="numeric(10,4)">
                 <constraints nullable="false"/>
             </column>
-            <column name="age" type="numeric(4,2)">
+            <column name="age" type="numeric(10,4)">
                 <constraints nullable="false"/>
             </column>
             <column name="height" type="numeric(10,4)">
                 <constraints nullable="false"/>
             </column>
-            <column name="arrival_date" type="date">
+            <column name="arrival_date" type="datetime">
                 <constraints nullable="false" checkConstraint= "sysdate >= arriveData"/>
             </column>
             <column name="father_id" type="UUID">

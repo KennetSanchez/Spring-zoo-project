@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: co.edu.icesi.zoowebpage.integration.CreateAnimalIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 10.622 s <<< FAILURE! - in co.edu.icesi.zoowebpage.integration.CreateAnimalIntegrationTest
+createAnimalNoParents  Time elapsed: 0.747 s  <<< ERROR!
+com.fasterxml.jackson.databind.exc.InvalidFormatException: 
+ 
+ at [Source: (String)"{"id":"1f92b95c-1c9e-48fa-8a25-744dd7253ea6","name":"King Julien","sex":"M","weight":1900.0,"age":12.0,"height":98.0,"arrivalDate":"2022-10-21T13:31:13"}"; line: 1, column: 132] (through reference chain: co.edu.icesi.zoowebpage.dto.AnimalDTO["arrivalDate"])
+	at co.edu.icesi.zoowebpage.integration.CreateAnimalIntegrationTest.createAnimalNoParents(CreateAnimalIntegrationTest.java:63)
+
