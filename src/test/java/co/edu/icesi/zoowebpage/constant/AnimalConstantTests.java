@@ -11,6 +11,11 @@ public class AnimalConstantTests {
     public final UUID RTL_MOTHER_TEST_ID = UUID.nameUUIDFromBytes("motherIdSeed".getBytes());
 
 
+    public static final String RTL_DB_ANIMAL_NAME = "Julien";
+    public static final UUID RTL_DB_FATHER_ID = UUID.fromString("6a7c41b7-35c4-4f29-ac8f-7f87570b8fa8");
+    public static final UUID RTL_DB_MOTHER_ID = UUID.fromString("36748876-3c6e-4e86-b9ed-be46ac39ed8c");
+
+
     //Valid data
     public final LocalDateTime ARRIVAL_VALID_DATE = LocalDateTime.parse("2022-10-21 13:31:13", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     public final String RTL_VALID_NAME1 = "King Julien";

@@ -80,6 +80,16 @@ public class CreateAnimalIntegrationTest {
         assertThat(animalDTO,hasProperty("name", is("Julien Jr")));
     }
 
+    @Test
+    @SneakyThrows
+    public void cantCreateAnimalWrongParams(){
+        String body = parseResourceToString("createAnimalWrongParams.json");
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.post("/animals/createAnimalNoParents")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(body)).andExpect(status().isBadRequest())
+                .andReturn();
+    }
+
     @SneakyThrows
     private String parseResourceToString(String classpath) {
         Resource resource = new ClassPathResource(classpath);
