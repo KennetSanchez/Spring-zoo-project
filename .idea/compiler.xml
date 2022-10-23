@@ -18,11 +18,13 @@
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.2.Final/mapstruct-1.5.2.Final.jar" />
         </processorPath>
         <module name="zoo-web-page" />
+        <module name="Spring-zoo-project" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Spring-zoo-project" options="-parameters" />
       <module name="zoo-web-page" options="-parameters" />
     </option>
   </component>

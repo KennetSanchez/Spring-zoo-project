@@ -46,10 +46,12 @@ public class AnimalServiceImpl implements AnimalService {
         return getAnimals().stream().peek(System.out::println).
                 filter(animal -> animal.getName().equalsIgnoreCase(animalName)).findFirst().orElse(null);
     }
+
     @Override
     public Animal getAnimalUsingId(UUID id){
         return animalRepository.findById(id).orElse(null);
     }
+
     @Override
     public Animal createAnimal(Animal animalDTO){
         nameUnique(animalDTO);

@@ -24,7 +24,7 @@ public class AnimalDTO {
     private String name;
 
     @NotNull
-    @Pattern(regexp = "[MnFf]", message = "The sex has only has 4 valid characters: 'M', 'm', 'F', 'f'")
+    @Pattern(regexp = "[MmFf]", message = "The sex has only has 4 valid characters: 'M', 'm', 'F', 'f'")
     private String sex;
 
     @DecimalMin(value = AnimalConstant.RTL_LOWER_BOUND_WEIGHT + "", message = "It's weight it's too low, you should feed it more :c")

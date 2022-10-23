@@ -23,8 +23,6 @@ public class AnimalController implements AnimalAPI {
     public final AnimalMapper animalMapper;
     public final AnimalService animalService;
 
-
-
     @Override
     public List<AnimalDTO> getAnimalUsingName(String name) {
         return animalService.getAnimalUsingName(name).stream().map(animalMapper::fromAnimal).collect(Collectors.toList());
@@ -49,7 +47,6 @@ public class AnimalController implements AnimalAPI {
             parentValidSex(animalMapper.fromAnimal(animalService.getAnimalUsingId(animalDTO.getMotherId())), "F");
         }
         return animalMapper.fromAnimalWithParents(animalService.createAnimal(animalMapper.fromDTOWithParents(animalDTO)));
-
     }
 
     @Override
