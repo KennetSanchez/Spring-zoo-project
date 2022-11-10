@@ -95,7 +95,7 @@ public class AnimalServiceTest{
     }
 
     @Test
-    public void searchsByName(){
+    public void searchByName(){
         setupScene1();
        try{
            //This throws an exceptions since the repository it's a mock and can't save the data

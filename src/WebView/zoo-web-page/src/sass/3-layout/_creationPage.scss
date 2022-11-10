@@ -1,0 +1,23 @@
+.createAnimalWrapper{
+    background-color: #CCCCCC;
+
+    #inputWrapper{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        #inputSection{
+            grid-column: 1;
+        }
+
+        #inputDecoration{
+            grid-column: 2;
+        }
+
+    }
+}
+
+img{
+    max-width: 15rem;
+    max-height: 15rem;
+}
+
