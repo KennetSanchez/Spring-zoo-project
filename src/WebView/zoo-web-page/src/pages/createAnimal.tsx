@@ -1,25 +1,54 @@
 import "./../sass/3-layout/_creationPage.scss"
 
 export const CreateAnimal = () => {
+    
+    var valid = true
+    function validateCharacters(id: string){
+        let element = document.getElementById(id)
+
+        if(valid){
+            element?.setAttribute("style", "background-color:#ff0000")
+        }else{
+            element?.setAttribute("style", "background-color:#00ff00")
+        }
+        valid = !valid
+    }
+    
     return (
         <div className="createAnimalWrapper">
             <section id="inputWrapper">
                 <section id="inputSection">
-                    <input type="text" id="nameInput" />
-                    <input type="" id="ageInput" />
-
                     <br />
-                    <input type="radio" name="sex" id="inputSexMale" value="Male" checked />
-                    <label htmlFor="inputSexMale">Male</label>
+                    <p className="inputLabel">Name: </p>
+                    <input type="text" id="nameInput" className="input" onChange = {()=>validateCharacters("nameInput")}/>
                     <br />
 
-                    <input type="radio" name="sex" id="inputSexFemale" value="Female" placeholder="Female" />
-                    <label htmlFor="inputSexFemale">Female</label>
+                    <br />
+                    <p className="inputLabel">Age (months): </p>
+                    <input type="number" id="ageInput" className="input" />
                     <br />
 
+                    <p className="inputLabel">Sex: </p>
 
-                    <input type="number" id="weightInput" />
-                    <input type="number" id="heightInput" />
+                    <section id="sexWrapper">
+                        <input type="radio" name="sex" id="inputSexMale" value="Male" checked />
+                        <label className="inputLabel" htmlFor="inputSexMale">Male</label>
+
+                        <input type="radio" name="sex" id="inputSexFemale" value="Female" placeholder="Female" />
+                        <label className="inputLabel" htmlFor="inputSexFemale">Female</label>
+                    </section>
+
+                    <br />
+                    <p className="inputLabel">Weight(cm): </p>
+                    <input type="number" id="weightInput" className="input"/>
+
+                    <br />
+
+                    <br />
+                    <p className="inputLabel">Height(cm): </p>
+                    <input type="number" id="heightInput" className="input"/>
+                   
+                    <br />
 
                 </section>
                 <section id="inputDecoration">

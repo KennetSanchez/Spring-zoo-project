@@ -1,23 +1,53 @@
-.createAnimalWrapper{
-    background-color: #CCCCCC;
+.createAnimalWrapper {
+  background-color: #cccccc;
 
-    #inputWrapper{
+  border-radius: 8px;
+  background: #cccccc;
+  box-shadow: -15px 15px 30px #ababab, -15px -15px 30px #ededed;  
+  
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 10%;
+
+  #inputWrapper {
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    #inputSection {
+      grid-column: 1;
+    
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 2fr 1fr;
+        
 
-        #inputSection{
+        .inputLabel{
             grid-column: 1;
         }
 
-        #inputDecoration{
+        #sexWrapper{
             grid-column: 2;
         }
 
+        .input{
+            border-radius: 3px;
+            border-style: none;
+            grid-column: 2;
+        }
+    
     }
+
+    #inputDecoration {
+        margin-left: 50%;
+      grid-column: 2;
+    }
+  }
 }
 
-img{
-    max-width: 15rem;
-    max-height: 15rem;
-}
 
+
+img {
+  max-width: 15rem;
+  max-height: 15rem;
+}
