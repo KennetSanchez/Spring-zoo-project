@@ -1,0 +1,15 @@
+@use "variables" as v;
+
+body{
+    background-color: v.$global_background;
+}
+
+button{
+    border-style: none;
+    border-radius: v.$buttons_radius;
+    background-color: v.$primary_button;
+    height: v.$button_height;
+    width: v.$button_width;
+
+    filter: drop-shadow(-2px 6px 6px #000);
+}
