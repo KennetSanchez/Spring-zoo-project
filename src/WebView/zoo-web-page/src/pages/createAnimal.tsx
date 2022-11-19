@@ -1,4 +1,8 @@
 import "./../sass/3-layout/_creationPage.scss"
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DesktopDateTimePicker, LocalizationProvider } from '@mui/x-date-pickers-pro';
+import { TextField } from "@mui/material";
+import React from "react";
 
 export const CreateAnimal = () => {
 
@@ -14,7 +18,7 @@ export const CreateAnimal = () => {
     const heightInputId = "heightInput"
 
     var animalName: string, animalAge: number, animalSex: string, animalWeight: number, animalHeight: number
-    var validAnimal : boolean
+    var validAnimal: boolean
     let lettersRegex = new RegExp("(?=[^a-zA-Z ])")
 
     function getAnimalJson(): String {
@@ -24,7 +28,8 @@ export const CreateAnimal = () => {
                 "age": "${animalAge}",
                 "sex": "${animalSex}",
                 "weight": ${animalWeight},
-                "height": ${animalHeight}  
+                "height": ${animalHeight},
+                "arrivalDate" : ${arrivalDate}
             }
         `
 
@@ -47,20 +52,20 @@ export const CreateAnimal = () => {
         validateConstraints()
     }
 
-    function validateConstraints(){
-        validAnimal= true
+    function validateConstraints() {
+        validAnimal = true
 
-        if(lettersRegex.test(animalName) || animalName == ""){
+        if (lettersRegex.test(animalName) || animalName == "") {
             validAnimal = false
-        }else if( Number.isNaN(animalAge) || animalAge < minAge || animalAge > maxAge){
+        } else if (Number.isNaN(animalAge) || animalAge < minAge || animalAge > maxAge) {
             validAnimal = false
-        }else if( Number.isNaN(animalHeight) || animalHeight < minHeight || animalHeight > maxHeight){
+        } else if (Number.isNaN(animalHeight) || animalHeight < minHeight || animalHeight > maxHeight) {
             validAnimal = false
-        }else if( Number.isNaN(animalWeight)|| animalWeight < minWeight || animalWeight > maxWeight){
+        } else if (Number.isNaN(animalWeight) || animalWeight < minWeight || animalWeight > maxWeight) {
             validAnimal = false
         }
 
-        
+
     }
 
     function updateInputClass(id: string, valid: boolean) {
@@ -103,6 +108,13 @@ export const CreateAnimal = () => {
         updateInputClass(id, valid)
     }
 
+    const dayjs = require('dayjs')
+    const [arrivalDate, setArrivalDate] = React.useState(dayjs('2003-03-18T00:00:00'));
+
+    const handleChange = (newDate: any) => {
+      setArrivalDate(newDate);
+    };
+
     return (
         <div className="createAnimalWrapper">
             <section id="inputWrapper">
@@ -110,11 +122,6 @@ export const CreateAnimal = () => {
                     <br />
                     <p className="inputLabel">Name: </p>
                     <input type="text" id="nameInput" className="input" onChange={() => validateNameInput("nameInput")} />
-                    <br />
-
-                    <br />
-                    <p className="inputLabel">Age (months): </p>
-                    <input type="number" id="ageInput" className="input" onChange={() => validateRangeInput("ageInput", minAge, maxAge)} />
                     <br />
 
                     <p className="inputLabel">Sex: </p>
@@ -128,6 +135,19 @@ export const CreateAnimal = () => {
                     </section>
 
                     <br />
+                    <p className="inputLabel">Arrival date: </p>
+
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                        <DesktopDateTimePicker disableFuture = {true} renderInput ={props => <TextField {...props} />} onChange={handleChange} value={arrivalDate} />
+                    </LocalizationProvider>
+                    <br />
+
+                    <br />
+                    <p className="inputLabel">Age (months): </p>
+                    <input type="number" id="ageInput" className="input" onChange={() => validateRangeInput("ageInput", minAge, maxAge)} />
+                    <br />
+
+
                     <p className="inputLabel">Weight(cm): </p>
                     <input type="number" id="weightInput" className="input" onChange={() => validateRangeInput("weightInput", minWeight, maxWeight)} />
 
@@ -139,7 +159,7 @@ export const CreateAnimal = () => {
 
                     <br />
 
-                    <button id="btn_createAnimal" onClick={createAnimal}>Create animal</button>
+                    <button id="btn_createAnimal" className = "buttons" onClick={createAnimal}>Create animal</button>
 
                 </section>
                 <section id="inputDecoration">
@@ -151,5 +171,3 @@ export const CreateAnimal = () => {
         </div>
     )
 }
-
-export default { CreateAnimal }

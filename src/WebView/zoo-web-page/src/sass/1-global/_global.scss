@@ -4,7 +4,7 @@ body{
     background-color: v.$global_background;
 }
 
-button{
+.buttons{
     border-style: none;
     border-radius: v.$buttons_radius;
     background-color: v.$primary_button;
