@@ -1,50 +1,120 @@
 import "./../sass/3-layout/_creationPage.scss"
 
 export const CreateAnimal = () => {
-    
+
     const minAge = 12, maxAge = 14;
     const minHeight = 130, maxHeight = 1300;
     const minWeight = 130, maxWeight = 1300;
 
-    function validateName(id: string){
-        let element = document.getElementById(id) as HTMLInputElement
+    const nameInputId = "nameInput"
+    const ageInputId = "ageInput"
+    const sexMaleInputId = "inputSexMale"
+    const sexFemaleInputId = "inputSexFemale"
+    const weightInputId = "weightInput"
+    const heightInputId = "heightInput"
 
-        let text = element?.value
-        let valid = !new RegExp("(?=[^a-zA-Z ])").test(text)
+    var animalName: string, animalAge: number, animalSex: string, animalWeight: number, animalHeight: number
+    var validAnimal : boolean
+    let lettersRegex = new RegExp("(?=[^a-zA-Z ])")
+
+    function getAnimalJson(): String {
+        let jsonString = `
+            {
+                "name": "${animalName}",
+                "age": "${animalAge}",
+                "sex": "${animalSex}",
+                "weight": ${animalWeight},
+                "height": ${animalHeight}  
+            }
+        `
+
+        const json = JSON.parse(jsonString)
+        return json
+    }
+
+    function updateData() {
+
+        animalName = getInputElement(nameInputId).value
+        animalAge = getInputElement(ageInputId).valueAsNumber
+        animalHeight = getInputElement(weightInputId).valueAsNumber
+        animalWeight = getInputElement(heightInputId).valueAsNumber
+
+        let isMale = getInputElement(sexMaleInputId).checked
+
+        animalSex = ""
+        isMale == true ? animalSex = "Male" : animalSex = "Female"
+
+        validateConstraints()
+    }
+
+    function validateConstraints(){
+        validAnimal= true
+
+        if(lettersRegex.test(animalName) || animalName == ""){
+            validAnimal = false
+        }else if( Number.isNaN(animalAge) || animalAge < minAge || animalAge > maxAge){
+            validAnimal = false
+        }else if( Number.isNaN(animalHeight) || animalHeight < minHeight || animalHeight > maxHeight){
+            validAnimal = false
+        }else if( Number.isNaN(animalWeight)|| animalWeight < minWeight || animalWeight > maxWeight){
+            validAnimal = false
+        }
+
         
-
-        if(valid){
-            element?.setAttribute("class", "input input__input-approved")
-        }else{
-            element?.setAttribute("class", "input input__input-denied")
-        }
     }
 
-    function validateRange(id: string, minValue: number, maxValue: number){
+    function updateInputClass(id: string, valid: boolean) {
+        if (valid) {
+            getInputElement(id)?.setAttribute("class", "input input__input-approved")
+        } else {
+            getInputElement(id)?.setAttribute("class", "input input__input-denied")
+        }
+
+    }
+
+    function createAnimal() {
+        updateData()
+
+        if (validAnimal) {
+            let jsonAnimal = getAnimalJson()
+            console.log(jsonAnimal)
+        } else {
+            alert("Invalid data")
+        }
+
+    }
+
+    function getInputElement(id: string): HTMLInputElement {
         let element = document.getElementById(id) as HTMLInputElement
-        let value = element?.valueAsNumber
-        let valid = (value >= minValue && value <= maxValue)? true : false
-
-
-        if(valid){
-            element?.setAttribute("class", "input input__input-approved")
-        }else{
-            element?.setAttribute("class", "input input__input-denied")
-        }
+        return element
     }
-    
+
+    function validateNameInput(id: string) {
+        let text = getInputElement(id).value
+        let valid = !lettersRegex.test(text)
+
+        updateInputClass(id, valid)
+    }
+
+    function validateRangeInput(id: string, minValue: number, maxValue: number) {
+        let value = getInputElement(id).valueAsNumber
+        let valid = (value >= minValue && value <= maxValue) ? true : false
+
+        updateInputClass(id, valid)
+    }
+
     return (
         <div className="createAnimalWrapper">
             <section id="inputWrapper">
                 <section id="inputSection">
                     <br />
                     <p className="inputLabel">Name: </p>
-                    <input type="text" id="nameInput" className="input" onChange = {()=>validateName("nameInput")}/>
+                    <input type="text" id="nameInput" className="input" onChange={() => validateNameInput("nameInput")} />
                     <br />
 
                     <br />
                     <p className="inputLabel">Age (months): </p>
-                    <input type="number" id="ageInput" className="input" onChange = {()=>validateRange("ageInput", minAge, maxAge)}/>
+                    <input type="number" id="ageInput" className="input" onChange={() => validateRangeInput("ageInput", minAge, maxAge)} />
                     <br />
 
                     <p className="inputLabel">Sex: </p>
@@ -59,17 +129,17 @@ export const CreateAnimal = () => {
 
                     <br />
                     <p className="inputLabel">Weight(cm): </p>
-                    <input type="number" id="weightInput" className="input"  onChange = {()=>validateRange("weightInput", minWeight, maxWeight)}/>
+                    <input type="number" id="weightInput" className="input" onChange={() => validateRangeInput("weightInput", minWeight, maxWeight)} />
 
                     <br />
 
                     <br />
                     <p className="inputLabel">Height(cm): </p>
-                    <input type="number" id="heightInput" className="input" onChange = {()=>validateRange("heightInput", minHeight, maxHeight)}/>
-                   
+                    <input type="number" id="heightInput" className="input" onChange={() => validateRangeInput("heightInput", minHeight, maxHeight)} />
+
                     <br />
 
-                    <button id="btn_createAnimal">Create animal</button>
+                    <button id="btn_createAnimal" onClick={createAnimal}>Create animal</button>
 
                 </section>
                 <section id="inputDecoration">
