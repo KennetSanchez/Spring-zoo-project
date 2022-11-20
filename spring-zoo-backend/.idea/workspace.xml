@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fe7f19d1-4c19-4aec-b474-be718516a43a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/edu/icesi/zoowebpage/config/JacksonConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/edu/icesi/zoowebpage/config/JacksonConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../zoo-web-page/src/pages/createAnimal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../zoo-web-page/src/pages/createAnimal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,24 +43,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/OneDrive - Universidad Icesi (@icesi.edu.co)/Universidad/6 semestre/Papu net/SpringZooProject/Spring-zoo-project/spring-zoo-backend",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "show.run.dashboard.notification": "false",
-    "spring.configuration.checksum": "684a9462a9d89eaaab992f484e385ffc"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive - Universidad Icesi (@icesi.edu.co)/Universidad/6 semestre/Papu net/SpringZooProject/Spring-zoo-project/spring-zoo-backend&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;show.run.dashboard.notification&quot;: &quot;false&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;684a9462a9d89eaaab992f484e385ffc&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\OneDrive - Universidad Icesi (@icesi.edu.co)\Universidad\6 semestre\Papu net\SpringZooProject\Spring-zoo-project\src\test" />
@@ -199,6 +200,7 @@
       <workItem from="1668906586801" duration="261000" />
       <workItem from="1668906860444" duration="4608000" />
       <workItem from="1668911537827" duration="150000" />
+      <workItem from="1668949742333" duration="1781000" />
     </task>
     <servers />
   </component>

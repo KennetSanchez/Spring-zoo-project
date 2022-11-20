@@ -24,6 +24,9 @@ export const CreateAnimal = () => {
     const urlCreateAnimal = "http://localhost:8080/animals/createAnimalNoParents"
 
     function getAnimalJson(): Object {
+        //This characters are being removed since there are no necessary and cause conflicts with the api.
+        let formattedDate = arrivalDate.$d.toISOString().replace('Z','').replace('.000', '')
+        console.log(formattedDate)
         let jsonString = 
         {
             name : animalName,
@@ -31,7 +34,7 @@ export const CreateAnimal = () => {
             age : animalAge,
             weight : animalWeight,
             height : animalHeight,
-            arrivalDate: "2022-11-19T09:08:07"
+            arrivalDate: formattedDate
         }
         
 
@@ -134,41 +137,41 @@ export const CreateAnimal = () => {
                 <section id="inputSection">
                     <br />
                     <p className="inputLabel">Name: </p>
-                    <input type="text" id="nameInput" className="input" onChange={() => validateNameInput("nameInput")} />
+                    <input type="text" id={nameInputId} className="input" onChange={() => validateNameInput(`${nameInputId}`)} />
                     <br />
 
                     <p className="inputLabel">Sex: </p>
 
                     <section id="sexWrapper">
-                        <input type="radio" name="sex" id="inputSexMale" value="Male" defaultChecked />
-                        <label className="inputLabel" htmlFor="inputSexMale">Male</label>
+                        <input type="radio" name="sex" id={sexMaleInputId} value="Male" defaultChecked />
+                        <label className="inputLabel" htmlFor={sexMaleInputId}>Male</label>
 
-                        <input type="radio" name="sex" id="inputSexFemale" value="Female" placeholder="Female" />
-                        <label className="inputLabel" htmlFor="inputSexFemale">Female</label>
+                        <input type="radio" name="sex" id={sexFemaleInputId} value="Female" placeholder="Female" />
+                        <label className="inputLabel" htmlFor={sexFemaleInputId}>Female</label>
                     </section>
 
                     <br />
                     <p className="inputLabel">Arrival date: </p>
 
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DesktopDateTimePicker disableFuture={true} renderInput={props => <TextField {...props} />} onChange={handleChange} value={arrivalDate} />
+                        <DesktopDateTimePicker disableFuture={true} renderInput={props => <TextField {...props} />} ampm={false} onChange = {handleChange} value = {arrivalDate} />
                     </LocalizationProvider>
                     <br />
 
                     <br />
                     <p className="inputLabel">Age (months): </p>
-                    <input type="number" id="ageInput" className="input" onChange={() => validateRangeInput("ageInput", minAge, maxAge)} />
+                    <input type="number" id={ageInputId} className="input" onChange={() => validateRangeInput(`${ageInputId}`, minAge, maxAge)} />
                     <br />
 
 
                     <p className="inputLabel">Weight(cm): </p>
-                    <input type="number" id="weightInput" className="input" onChange={() => validateRangeInput("weightInput", minWeight, maxWeight)} />
+                    <input type="number" id={weightInputId} className="input" onChange={() => validateRangeInput(`${weightInputId}`, minWeight, maxWeight)} />
 
                     <br />
 
                     <br />
                     <p className="inputLabel">Height(cm): </p>
-                    <input type="number" id="heightInput" className="input" onChange={() => validateRangeInput("heightInput", minHeight, maxHeight)} />
+                    <input type="number" id={heightInputId} className="input" onChange={() => validateRangeInput(`${heightInputId}`, minHeight, maxHeight)} />
 
                     <br />
 
