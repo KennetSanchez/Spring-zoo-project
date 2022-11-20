@@ -87,7 +87,6 @@ export const CreateAnimal = () => {
 
         if (validAnimal) {
             let jsonAnimal = getAnimalJson()
-            console.log(JSON.stringify(jsonAnimal))
 
             let res = await fetch(urlCreateAnimal, {
                 method: 'POST',

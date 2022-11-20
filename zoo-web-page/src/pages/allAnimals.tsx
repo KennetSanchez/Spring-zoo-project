@@ -1,25 +1,51 @@
-import "./../sass/3-layout/_searchAnimalPage.scss"
-import animalWithoutParents from "../types/animals"
-import animalWithoutanimals from "../types/animals"
+import "./../sass/3-layout/_allAnimalsPage.scss"
+import { Card, CardContent, CardMedia, CardActionArea, Typography } from "@mui/material"
+import React from "react"
 
 export const AllAnimals = () => {
 
     const urlGet = "http://localhost:8080/animals"
 
-    const data = []
 
-    async function getAnimals(){
+    const [data, setData]: any[] = React.useState([])
+    let count = 0
+
+    async function getAnimals() {
+        console.log("Entra")
         let res = await fetch(urlGet)
-        let response = await res.json()
-
-        response.forEach((element: any) => {
-            console.log(element)
-        });
+        setData(await res.json())
     }
 
-    
+
     return (
         <div className="allAnimalsWrapper">
+            <section id="cardSection">
+                {
+                    data.map((animal: any) => {
+                        return (
+                            <Card key={count++} sx={{ width: 280 }}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        height="140"
+                                        image="https://render.fineartamerica.com/images/rendered/default/poster/10/8/break/images/artworkimages/medium/1/adorable-ring-tailed-lemur-clinging-to-a-vine-dejavu-designs.jpg"
+                                        alt="green iguana"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="div">
+                                            {animal.name}
+                                        </Typography>
+                                            <p>Id: {animal.id}</p>
+                                            <p>Name: {animal.name}</p>
+                                            <p>Age: {animal.age}</p>
+                                            <p>Weight: {animal.weight}</p>
+                                            <p>Height: {animal.height}</p>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        )
+                    })}
+            </section>
             <button className="buttons" onClick={getAnimals}>Get all animals</button>
         </div>
     )

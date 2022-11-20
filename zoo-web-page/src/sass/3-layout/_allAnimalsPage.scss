@@ -1,0 +1,13 @@
+#cardSection{
+    display: flex;
+    gap: 5rem;
+    margin: 5%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    p{
+        overflow-wrap: break-word;
+    }
+}
+
