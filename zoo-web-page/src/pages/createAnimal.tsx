@@ -26,7 +26,6 @@ export const CreateAnimal = () => {
     function getAnimalJson(): Object {
         //This characters are being removed since there are no necessary and cause conflicts with the api.
         let formattedDate = arrivalDate.$d.toISOString().replace('Z','').replace('.000', '')
-        console.log(formattedDate)
         let jsonString = 
         {
             name : animalName,
