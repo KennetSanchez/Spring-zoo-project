@@ -1,6 +1,6 @@
 import "./../sass/3-layout/_allAnimalsPage.scss"
 import { Card, CardContent, CardMedia, CardActionArea, Typography } from "@mui/material"
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 export const AllAnimals = () => {
 
@@ -8,19 +8,29 @@ export const AllAnimals = () => {
     const urlSpecificAnimal = "http://localhost:3000/animals/name/"
 
 
-    const [data, setData]: any[] = React.useState([])
+    const [animals, setAnimals] = useState([]);
+    const [loading, setLoading] = useState(false);
 
-    async function getAnimals() {
-        let res = await fetch(urlGet)
-        setData(await res.json())
+    const getAnimals = () => {
+        fetch(urlGet)
+            .then((res) => res.json())
+            .then(data => {
+                setAnimals(data);
+                setLoading(false);
+            })
     }
+
+    useEffect(() => {
+        setLoading(true);
+        getAnimals();
+    }, []);
 
 
     return (
         <div className="allAnimalsWrapper">
             <section id="cardSection">
                 {
-                    data.map((animal: any) => (
+                    animals.map((animal: any) => (
                         <Card key={animal.id} sx={{ width: 280 }}>
                             <CardActionArea href={urlSpecificAnimal + animal.name} >
                                 <CardMedia
@@ -42,7 +52,6 @@ export const AllAnimals = () => {
                         </Card>
                     ))}
             </section>
-            <button className="buttons" onClick={getAnimals}>Get all animals</button>
         </div>
     )
 }
