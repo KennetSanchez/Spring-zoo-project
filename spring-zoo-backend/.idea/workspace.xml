@@ -5,149 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe7f19d1-4c19-4aec-b474-be718516a43a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/resources/check-lg.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/resources/x-lg.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/pages/allAnimals.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/pages/createAnimal.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/pages/searchAnimal.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/react-app-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/reportWebVitals.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/sass/1-global/_global.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/sass/1-global/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/sass/1-global/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/sass/3-layout/_allAnimalsPage.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/sass/3-layout/_creationPage.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/sass/3-layout/_searchAnimalPage.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/sass/3-layout/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/sass/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/setupTests.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/styles/1-global/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/styles/1-global/index.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/styles/3-layout/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/styles/3-layout/index.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/styles/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/styles/styles.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/src/types/animals.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/WebView/zoo-web-page/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/ZooWebPageApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/api/AnimalAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/config/JacksonConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/config/LiquibaseConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/config/jackson/LocalDateTimeDeserializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/config/jackson/LocalDateTimeSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/constant/AnimalConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/constant/AnimalErrorCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/controller/AnimalController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/dto/AnimalDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/dto/AnimalWithParentsDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/error/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/error/exception/AnimalError.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/error/exception/AnimalException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/mapper/AnimalMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/model/Animal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/repository/AnimalRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/service/AnimalService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/co/edu/icesi/zoowebpage/service/impl/AnimalServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/resources/db.changelog/createAnimal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/resources/db.changelog/master.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/java/co/edu/icesi/zoowebpage/ZooWebPageApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/java/co/edu/icesi/zoowebpage/constant/AnimalConstantTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/java/co/edu/icesi/zoowebpage/controller/AnimalControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/java/co/edu/icesi/zoowebpage/integration/CreateAnimalIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/java/co/edu/icesi/zoowebpage/integration/GetAnimalIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/java/co/edu/icesi/zoowebpage/integration/config/InitialDataConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/java/co/edu/icesi/zoowebpage/service/AnimalServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/resources/createAnimal.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/resources/createAnimalWrongParams.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/resources/createSonAnimal.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/resources/data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/ZooWebPageApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/api/AnimalAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/config/JacksonConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/config/LiquibaseConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/config/jackson/LocalDateTimeDeserializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/config/jackson/LocalDateTimeSerializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/constant/AnimalConstant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/constant/AnimalErrorCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/controller/AnimalController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/dto/AnimalDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/dto/AnimalWithParentsDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/error/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/error/exception/AnimalError.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/error/exception/AnimalException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/mapper/AnimalMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/mapper/AnimalMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/model/Animal$AnimalBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/model/Animal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/repository/AnimalRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/service/AnimalService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/co/edu/icesi/zoowebpage/service/impl/AnimalServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/db.changelog/createAnimal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/db.changelog/master.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/generated-sources/annotations/co/edu/icesi/zoowebpage/mapper/AnimalMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/surefire-reports/TEST-co.edu.icesi.zoowebpage.ZooWebPageApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/surefire-reports/TEST-co.edu.icesi.zoowebpage.controller.AnimalControllerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/surefire-reports/TEST-co.edu.icesi.zoowebpage.integration.CreateAnimalIntegrationTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/surefire-reports/TEST-co.edu.icesi.zoowebpage.service.AnimalServiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/surefire-reports/co.edu.icesi.zoowebpage.ZooWebPageApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/surefire-reports/co.edu.icesi.zoowebpage.controller.AnimalControllerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/surefire-reports/co.edu.icesi.zoowebpage.integration.CreateAnimalIntegrationTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/surefire-reports/co.edu.icesi.zoowebpage.service.AnimalServiceTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/co/edu/icesi/zoowebpage/ZooWebPageApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/co/edu/icesi/zoowebpage/constant/AnimalConstantTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/co/edu/icesi/zoowebpage/controller/AnimalControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/co/edu/icesi/zoowebpage/integration/CreateAnimalIntegrationTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/co/edu/icesi/zoowebpage/integration/GetAnimalIntegrationTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/co/edu/icesi/zoowebpage/integration/config/InitialDataConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/co/edu/icesi/zoowebpage/service/AnimalServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/createAnimal.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/createAnimalWrongParams.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/createSonAnimal.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/test-classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zoo-web-page/src/pages/createAnimal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../zoo-web-page/src/pages/createAnimal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +56,8 @@
     "last_opened_file_path": "D:/OneDrive - Universidad Icesi (@icesi.edu.co)/Universidad/6 semestre/Papu net/SpringZooProject/Spring-zoo-project/spring-zoo-backend",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "964eb34b1f739901856123b6727c65c8"
+    "show.run.dashboard.notification": "false",
+    "spring.configuration.checksum": "684a9462a9d89eaaab992f484e385ffc"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -337,7 +197,8 @@
       <workItem from="1666726475798" duration="472000" />
       <workItem from="1668902861404" duration="3496000" />
       <workItem from="1668906586801" duration="261000" />
-      <workItem from="1668906860444" duration="4189000" />
+      <workItem from="1668906860444" duration="4608000" />
+      <workItem from="1668911537827" duration="150000" />
     </task>
     <servers />
   </component>

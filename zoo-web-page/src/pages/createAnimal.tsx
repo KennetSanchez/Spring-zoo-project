@@ -6,9 +6,9 @@ import React from "react";
 
 export const CreateAnimal = () => {
 
-    const minAge = 12, maxAge = 14;
-    const minHeight = 0, maxHeight = 1300;
-    const minWeight = 0, maxWeight = 1300;
+    const minAge = 0, maxAge = 32;
+    const minHeight = 28.9, maxHeight = 103.5;
+    const minWeight = 72.14, maxWeight =  2900;
 
     const nameInputId = "nameInput"
     const ageInputId = "ageInput"
@@ -26,11 +26,11 @@ export const CreateAnimal = () => {
     function getAnimalJson(): Object {
         let jsonString = 
         {
-            name : "papu noob",
-            sex : "M",
-            age : 12,
-            weight : 96,
-            height : 100,
+            name : animalName,
+            sex : animalSex,
+            age : animalAge,
+            weight : animalWeight,
+            height : animalHeight,
             arrivalDate: "2022-11-19T09:08:07"
         }
         
@@ -48,7 +48,7 @@ export const CreateAnimal = () => {
         let isMale = getInputElement(sexMaleInputId).checked
 
         animalSex = ""
-        isMale == true ? animalSex = "Male" : animalSex = "Female"
+        isMale == true ? animalSex = "M" : animalSex = "F"
 
         validateConstraints()
     }
