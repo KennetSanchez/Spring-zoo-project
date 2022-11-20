@@ -1,0 +1,14 @@
+body {
+  background-color: rgba(175, 177, 130, 0.6705882353);
+}
+
+.buttons {
+  border-style: none;
+  border-radius: 1.5rem;
+  background-color: #ffd16f;
+  height: 2.4rem;
+  width: 10rem;
+  filter: drop-shadow(-2px 6px 6px #000);
+}
+
+/*# sourceMappingURL=index.css.map */

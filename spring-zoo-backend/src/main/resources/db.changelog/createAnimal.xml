@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet id="33d4e9bc-7210-47c3-9617-c56ab7c0750d" author="Kennet_Sánchez" failOnError="true">
+
+        <createTable tableName="animals">
+            <column name="id" type="UUID">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="name" type="varchar(120)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="sex" type="char(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="weight" type="numeric(10,4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="numeric(10,4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="height" type="numeric(10,4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="arrival_date" type="datetime">
+                <constraints nullable="false" checkConstraint= "sysdate >= arriveData"/>
+            </column>
+            <column name="father_id" type="UUID">
+                <constraints nullable="true"/>
+            </column>
+            <column name="mother_id" type="UUID">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
