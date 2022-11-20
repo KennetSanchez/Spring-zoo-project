@@ -10,6 +10,7 @@ import co.edu.icesi.zoowebpage.mapper.AnimalMapper;
 import co.edu.icesi.zoowebpage.service.AnimalService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;

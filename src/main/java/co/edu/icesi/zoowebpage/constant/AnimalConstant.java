@@ -14,5 +14,5 @@ public interface AnimalConstant {
 
     //Values are in years
     // According to https://animaldiversity.org/accounts/Lemur_catta/ , there's an RTL who lived 32 years
-    float RTL_UPPER_BOUND_AGE = 32F;
+    float   RTL_UPPER_BOUND_AGE = 32F;
 }

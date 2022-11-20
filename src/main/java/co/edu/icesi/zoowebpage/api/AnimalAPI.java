@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RequestMapping("/animals")
+@CrossOrigin(origins ="http://localhost:3000")
 public interface AnimalAPI {
 
     @GetMapping("/name/{name}")
