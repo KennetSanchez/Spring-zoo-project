@@ -10,9 +10,9 @@ function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<AllAnimals/>}/>
+          <Route path='animals/' element={<AllAnimals/>}/>
           <Route path='animals/createAnimalNoParents' element={<CreateAnimal/>}/>
-          <Route path='animals/name/:animalName' element={<SearchAnimal/>}/>
+          <Route path='animals/name/:name' element={<SearchAnimal/>}/>
           <Route path='*' element={<UnknownUrl/>}/>
         </Routes>
       </BrowserRouter>

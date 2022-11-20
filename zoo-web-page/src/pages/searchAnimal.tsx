@@ -1,26 +1,33 @@
 import { Card, CardActionArea, CardMedia, CardContent, Typography } from "@mui/material"
-import React from "react"
+import React, { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import "./../sass/3-layout/_searchAnimalPage.scss"
 
 export const SearchAnimal = () => {
     const params = useParams()
-
+    let firstTime = true
     async function loadData() {
         let getAnimalUrl = "http://localhost:8080/animals/name/"
-        let getSpecificAnimalUrl = (getAnimalUrl + params.animalName)
+        let getSpecificAnimalUrl = (getAnimalUrl + params.name)
         let res = await fetch(getSpecificAnimalUrl)
         let response = await res.json()
         setAnimal(await response)
-    }
-
+    } 
 
     const [animal, setAnimal] : any [] = React.useState()
+
+    useEffect(()=>{
+        if(firstTime){
+            loadData()
+            firstTime = false
+        }
+        }
+    )
 
     return (
         <div className="searchAnimalWrapper">
             {animal?.map((animal:any)=>(
-                <Card sx={{ width: 280 }}>
+                <Card key={animal.id} sx={{ width: 280 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -32,8 +39,6 @@ export const SearchAnimal = () => {
                             {animal.name}
                         </Typography>
                         <p>Id: {animal.id}</p>
-                        {animal.fatherId != undefined ? <p>Mother id: {animal.fatherId}</p> : <p>Father id: unknown</p>}
-                        {animal.motherId != undefined ? <p>Mother id: {animal.motherId}</p> : <p>Mother id: unknown</p>}
                         <p>Name: {animal.name}</p>
                         <p>Age: {animal.age} months</p>
                         <p>Weight: {animal.weight} g </p>
@@ -42,9 +47,6 @@ export const SearchAnimal = () => {
                 </CardActionArea>
             </Card>
             ))}
-            <button onClick={loadData}></button>
         </div>
     )
 }
-
-export default { SearchAnimal }

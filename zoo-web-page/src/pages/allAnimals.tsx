@@ -11,7 +11,6 @@ export const AllAnimals = () => {
     const [data, setData]: any[] = React.useState([])
 
     async function getAnimals() {
-        console.log("Entra")
         let res = await fetch(urlGet)
         setData(await res.json())
     }

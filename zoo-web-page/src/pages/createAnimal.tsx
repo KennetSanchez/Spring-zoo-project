@@ -8,7 +8,7 @@ export const CreateAnimal = () => {
 
     const minAge = 0, maxAge = 32;
     const minHeight = 28.9, maxHeight = 103.5;
-    const minWeight = 72.14, maxWeight =  2900;
+    const minWeight = 72.14, maxWeight = 2900;
 
     const nameInputId = "nameInput"
     const ageInputId = "ageInput"
@@ -16,26 +16,54 @@ export const CreateAnimal = () => {
     const sexFemaleInputId = "inputSexFemale"
     const weightInputId = "weightInput"
     const heightInputId = "heightInput"
+    const fatherInputId = "fatherInput"
+    const motherInputId = "motherInput"
 
-    var animalName: string, animalAge: number, animalSex: string, animalWeight: number, animalHeight: number
+    const lettersRegex = new RegExp("(?=[^a-zA-Z ])")
+    const uuidRegex = new RegExp("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")
+
+    const urlCreateAnimalWithParents = "http://localhost:8080/animals/createAnimalWithParents"
+    const urlCreateAnimalWithoutParents = "http://localhost:8080/animals/createAnimalNoParents"
+
+    var animalName: string, animalAge: number, animalSex: string, animalWeight: number, animalHeight: number, fatherId: string, motherId: string
     var validAnimal: boolean
-    let lettersRegex = new RegExp("(?=[^a-zA-Z ])")
+    var hasFamilyAtTheZoo: boolean
 
-    const urlCreateAnimal = "http://localhost:8080/animals/createAnimalNoParents"
+    let urlValidateParent = "http://localhost:8080/animals/id/"
+    let validFather = true, validMother = true
+
+    let alertMsg = ""
 
     function getAnimalJson(): Object {
         //This characters are being removed since there are no necessary and cause conflicts with the api.
-        let formattedDate = arrivalDate.$d.toISOString().replace('Z','').replace('.000', '')
-        let jsonString = 
-        {
-            name : animalName,
-            sex : animalSex,
-            age : animalAge,
-            weight : animalWeight,
-            height : animalHeight,
-            arrivalDate: formattedDate
+        let formattedDate = arrivalDate.$d.toISOString().replace('Z', '').replace('.000', '')
+        let jsonString
+
+        console.log(hasFamilyAtTheZoo)
+        if (hasFamilyAtTheZoo) {
+            jsonString =
+            {
+                name: animalName,
+                fatherId: fatherId,
+                motherId: motherId,
+                sex: animalSex,
+                age: animalAge,
+                weight: animalWeight,
+                height: animalHeight,
+                arrivalDate: formattedDate
+            }
+        } else {
+            jsonString =
+            {
+                name: animalName,
+                sex: animalSex,
+                age: animalAge,
+                weight: animalWeight,
+                height: animalHeight,
+                arrivalDate: formattedDate
+            }
         }
-        
+
 
         return jsonString
     }
@@ -43,9 +71,15 @@ export const CreateAnimal = () => {
     function updateData() {
 
         animalName = getInputElement(nameInputId).value
+        fatherId = getInputElement(fatherInputId).value
+        motherId = getInputElement(motherInputId).value
         animalAge = getInputElement(ageInputId).valueAsNumber
-        animalHeight = getInputElement(weightInputId).valueAsNumber
-        animalWeight = getInputElement(heightInputId).valueAsNumber
+        animalHeight = getInputElement(heightInputId).valueAsNumber
+        animalWeight = getInputElement(weightInputId).valueAsNumber
+
+        if(fatherId != "" || motherId != ""){
+            hasFamilyAtTheZoo = true
+        }
 
         let isMale = getInputElement(sexMaleInputId).checked
 
@@ -59,12 +93,31 @@ export const CreateAnimal = () => {
         validAnimal = true
 
         if (lettersRegex.test(animalName) || animalName == "") {
+            alertMsg = "The name doesn't fulfill the expected pattern"
             validAnimal = false
         } else if (Number.isNaN(animalAge) || animalAge < minAge || animalAge > maxAge) {
+            alertMsg = "The age is under or above the boundaries"
             validAnimal = false
         } else if (Number.isNaN(animalHeight) || animalHeight < minHeight || animalHeight > maxHeight) {
+            alertMsg = "The height is under or above the boundaries"
             validAnimal = false
         } else if (Number.isNaN(animalWeight) || animalWeight < minWeight || animalWeight > maxWeight) {
+            alertMsg = "The weight is under or above the boundaries"
+            validAnimal = false
+        } else if (!uuidRegex.test(fatherId) && fatherId != "") {
+            alertMsg = "The father id doesn't fulfill the expected uuid pattern"
+            validAnimal = false
+        } else if (!uuidRegex.test(motherId) && motherId != "") {
+            alertMsg = "The mother id doesn't fulfill the expected uuid pattern"
+            validAnimal = false
+        } else if (fatherId == motherId && fatherId != "") {
+            alertMsg = "The father shouldn't be the mother too"
+            validAnimal = false
+        } else if (!validFather) {
+            alertMsg = "The father must be registered at the zoo with sex 'M'"
+            validAnimal = false
+        } else if (!validMother) {
+            alertMsg = "The mother must be registered at the zoo with sex 'F'"
             validAnimal = false
         }
 
@@ -81,13 +134,23 @@ export const CreateAnimal = () => {
     }
 
     async function createAnimal() {
+        let url
+
+        if (hasFamilyAtTheZoo) {
+            url = urlCreateAnimalWithParents
+            validateParent(true, fatherId)
+            validateParent(false, motherId)
+        } else {
+            url = urlCreateAnimalWithoutParents
+        }
 
         updateData()
+
 
         if (validAnimal) {
             let jsonAnimal = getAnimalJson()
 
-            let res = await fetch(urlCreateAnimal, {
+            let res = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -98,7 +161,7 @@ export const CreateAnimal = () => {
                 .then(response => response.json())
                 .then(response => console.log(JSON.stringify(response)))
         } else {
-            alert("Invalid data")
+            alert(alertMsg)
         }
 
     }
@@ -112,6 +175,53 @@ export const CreateAnimal = () => {
         let text = getInputElement(id).value
         let valid = !lettersRegex.test(text)
 
+        updateInputClass(id, valid)
+    }
+
+    async function validateParent(father: boolean, parentId: string) {
+        if (parentId != "") {
+            let res = await fetch(urlValidateParent + parentId)
+            let response = await res.json().then(response => {
+                switch (father) {
+                    case true: {
+                        if (response.sex == ("M" || "m")) {
+                            validAnimal = true
+                        } else {
+                            validFather = false
+                            validAnimal = false
+                        }
+                        break;
+                    }
+                    case false: {
+                        if (response.sex == ("F" || "f")) {
+                            validMother = true
+                        } else {
+                            validMother = false
+                            validAnimal = false
+                        }
+                        break;
+                    }
+                }
+            }
+            )
+        }else{
+            father ? validFather = true : validMother = true
+        }
+    }
+
+    function validateUUID(id: string) {
+        let text = getInputElement(id).value
+        let valid: boolean
+
+        if (text == "") {
+            valid = true
+        } else if (uuidRegex.test(text)) {
+            valid = true
+            hasFamilyAtTheZoo = true
+        } else {
+            valid = false
+        }
+        console.log(valid)
         updateInputClass(id, valid)
     }
 
@@ -134,8 +244,16 @@ export const CreateAnimal = () => {
             <section id="inputWrapper">
                 <section id="inputSection">
                     <br />
-                    <p className="inputLabel">Name: </p>
+                    <p className="inputLabel">Name:  </p>
                     <input type="text" id={nameInputId} className="input" onChange={() => validateNameInput(`${nameInputId}`)} />
+                    <br />
+
+                    <p id="fatherIdP" className="inputLabel">Father id (optional): </p>
+                    <input type="text" id={fatherInputId} className="input" onChange={() => validateUUID(`${fatherInputId}`)} />
+                    <br />
+
+                    <p className="inputLabel">Mother id (optional): </p>
+                    <input type="text" id={motherInputId} className="input" onChange={() => validateUUID(`${motherInputId}`)} />
                     <br />
 
                     <p className="inputLabel">Sex: </p>
@@ -152,7 +270,7 @@ export const CreateAnimal = () => {
                     <p className="inputLabel">Arrival date: </p>
 
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DesktopDateTimePicker disableFuture={true} renderInput={props => <TextField {...props} />} ampm={false} onChange = {handleChange} value = {arrivalDate} />
+                        <DesktopDateTimePicker disableFuture={true} renderInput={props => <TextField {...props} />} ampm={false} onChange={handleChange} value={arrivalDate} />
                     </LocalizationProvider>
                     <br />
 
@@ -179,13 +297,12 @@ export const CreateAnimal = () => {
                     <div id="imageWrapper">
                         <img src="https://render.fineartamerica.com/images/rendered/default/poster/10/8/break/images/artworkimages/medium/1/adorable-ring-tailed-lemur-clinging-to-a-vine-dejavu-designs.jpg" alt="Papu mimido" />
                     </div>
-                    <p id='boundariesP'>The current boundaries are: 
-                            <ul>
-                                <li>Age: {minAge} - {maxAge} months</li>
-                                <li>Weight: {minWeight} - {maxWeight} g</li>
-                                <li>Height: {minHeight} - {maxHeight} cm</li>
-                            </ul>
-                    </p>
+                    <p id='boundariesP'>The current boundaries are: </p>
+                    <ul id='boundariesUl'>
+                        <li>Age: {minAge} - {maxAge} months</li>
+                        <li>Weight: {minWeight} - {maxWeight} g</li>
+                        <li>Height: {minHeight} - {maxHeight} cm</li>
+                    </ul>
                 </section>
                 <button id="btn_createAnimal" className="buttons" onClick={createAnimal}>Create animal</button>
             </section>
