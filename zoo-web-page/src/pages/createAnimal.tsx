@@ -162,7 +162,7 @@ export const CreateAnimal = () => {
                     <br />
 
 
-                    <p className="inputLabel">Weight(cm): </p>
+                    <p className="inputLabel">Weight(g): </p>
                     <input type="number" id={weightInputId} className="input" onChange={() => validateRangeInput(`${weightInputId}`, minWeight, maxWeight)} />
 
                     <br />
@@ -173,14 +173,21 @@ export const CreateAnimal = () => {
 
                     <br />
 
-                    <button id="btn_createAnimal" className="buttons" onClick={createAnimal}>Create animal</button>
 
                 </section>
                 <section id="inputDecoration">
                     <div id="imageWrapper">
                         <img src="https://render.fineartamerica.com/images/rendered/default/poster/10/8/break/images/artworkimages/medium/1/adorable-ring-tailed-lemur-clinging-to-a-vine-dejavu-designs.jpg" alt="Papu mimido" />
                     </div>
+                    <p id='boundariesP'>The current boundaries are: 
+                            <ul>
+                                <li>Age: {minAge} - {maxAge} months</li>
+                                <li>Weight: {minWeight} - {maxWeight} g</li>
+                                <li>Height: {minHeight} - {maxHeight} cm</li>
+                            </ul>
+                    </p>
                 </section>
+                <button id="btn_createAnimal" className="buttons" onClick={createAnimal}>Create animal</button>
             </section>
         </div>
     )

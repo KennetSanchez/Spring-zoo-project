@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fe7f19d1-4c19-4aec-b474-be718516a43a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zoo-web-page/src/pages/allAnimals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../zoo-web-page/src/pages/allAnimals.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zoo-web-page/src/pages/createAnimal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../zoo-web-page/src/pages/createAnimal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zoo-web-page/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../zoo-web-page/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zoo-web-page/src/pages/searchAnimal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../zoo-web-page/src/pages/searchAnimal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +200,8 @@
       <workItem from="1668906586801" duration="261000" />
       <workItem from="1668906860444" duration="4608000" />
       <workItem from="1668911537827" duration="150000" />
-      <workItem from="1668949742333" duration="6665000" />
+      <workItem from="1668949742333" duration="7265000" />
+      <workItem from="1668966951153" duration="599000" />
     </task>
     <servers />
   </component>

@@ -8,8 +8,8 @@ export const SearchAnimal = () => {
 
     async function loadData() {
         let getAnimalUrl = "http://localhost:8080/animals/name/"
-        let getSpecifycAnimalUrl = (getAnimalUrl + params.animalName)
-        let res = await fetch(getSpecifycAnimalUrl)
+        let getSpecificAnimalUrl = (getAnimalUrl + params.animalName)
+        let res = await fetch(getSpecificAnimalUrl)
         let response = await res.json()
         setAnimal(await response)
     }

@@ -4,6 +4,7 @@ body {
 
 .buttons {
   border-style: none;
+  margin-top: 2rem;
   border-radius: 1.5rem;
   background-color: #ffd16f;
   height: 2.4rem;
@@ -19,17 +20,19 @@ body {
   display: flex;
   justify-content: center;
   align-self: center;
-  margin-top: 5%;
+  margin-top: 2.5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .createAnimalWrapper #inputWrapper {
-  margin: 3rem;
+  margin: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .createAnimalWrapper #inputWrapper #inputSection {
   grid-column: 1;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 2fr;
 }
 .createAnimalWrapper #inputWrapper #inputSection .inputLabel {
   grid-column: 1;
@@ -40,6 +43,7 @@ body {
 .createAnimalWrapper #inputWrapper #inputSection .input {
   border-radius: 3px;
   max-height: 2rem;
+  margin-top: 1rem;
   grid-column: 2;
   border-style: none;
 }
@@ -58,16 +62,26 @@ body {
 }
 .createAnimalWrapper #inputWrapper #inputDecoration {
   grid-column: 2;
+  margin-left: 2rem;
 }
 .createAnimalWrapper #inputWrapper #inputDecoration #imageWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .createAnimalWrapper #inputWrapper #inputDecoration #imageWrapper img {
-  margin-top: 20%;
-  width: 15rem;
-  height: 15rem;
+  margin-top: 2rem;
+  width: 25rem;
+  height: 20rem;
+  border-radius: 15px;
+}
+.createAnimalWrapper #inputWrapper #inputDecoration #boundariesP {
+  color: rgb(129, 129, 129);
+}
+
+.buttons {
+  margin-left: 80%;
 }
 
 /*# sourceMappingURL=styles.css.map */

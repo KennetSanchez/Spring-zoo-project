@@ -4,6 +4,7 @@ body {
 
 .buttons {
   border-style: none;
+  margin-top: 2rem;
   border-radius: 1.5rem;
   background-color: #ffd16f;
   height: 2.4rem;
