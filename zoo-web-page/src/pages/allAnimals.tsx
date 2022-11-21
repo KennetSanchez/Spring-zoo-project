@@ -1,6 +1,6 @@
 import "./../sass/3-layout/_allAnimalsPage.scss"
 import { Card, CardContent, CardMedia, CardActionArea, Typography } from "@mui/material"
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 export const AllAnimals = () => {
 
@@ -37,7 +37,7 @@ export const AllAnimals = () => {
                                     component="img"
                                     height="140"
                                     image="https://render.fineartamerica.com/images/rendered/default/poster/10/8/break/images/artworkimages/medium/1/adorable-ring-tailed-lemur-clinging-to-a-vine-dejavu-designs.jpg"
-                                    alt="green iguana" />
+                                    alt="ring tailed lemur" />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
                                         {animal.name}
